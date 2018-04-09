@@ -19,12 +19,17 @@ Check out [the full writeup](https://dev.to/rtfeldman/tour-of-an-open-source-elm
 
 # Getting started
 
-If you don't already have `elm` and `elm-live`:
+If you don't already have `elm`,`elm-live`, and `uglify`:
 
-> npm install -g elm elm-live
+> npm install -g elm elm-live uglify-js
 
-Then, to build everything:
+To build everything for production (including minification etc):
 
-> elm-live --output=elm.js src/Main.elm --pushstate --open --debug
+> make
 
-(Leave off the `--debug` if you don't want the time-traveling debugger.)
+To build everything for local development (including the time-traveling debugger)
+
+> make dev
+
+I chose `make` only to show that you can make a SPA in Elm with any build tool
+you like. Very little configuration is necessary!
